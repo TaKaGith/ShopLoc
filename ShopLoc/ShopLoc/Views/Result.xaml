@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShopLoc.Views.Result"
+             xmlns:vm="clr-namespace:ShopLoc.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:Result/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#54C2BE</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120" />
+            <!--for 0,1 row only -->
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+
+        <BoxView Grid.Row="0"
+                 Grid.ColumnSpan="2"
+                 Color="#54C2BE" />
+
+        <Label Text="Your Item Located Here" FontSize="Title"></Label>
+  
+
+        <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Orientation="Vertical">
+      
+            <Image Source="Fullmap.png" HeightRequest="600"> </Image>
+      
+        </StackLayout>
+        <Button Grid.Row="9" Grid.ColumnSpan="2" Text="See Details" Clicked="Button_Clicked"></Button>
+
+
+
+    </Grid>
+</ContentPage>
